@@ -33,6 +33,12 @@ ul#userNav li.nav-item, span.nav-item{
 		font-size: 14px;
 		font-weight: 400;
 		text-transform: uppercase;
+		background: @white;
+    	color: @black;
+    	border-left: @color-resalte 4px solid;
+	}
+	&:hover{
+		background: @light-grey;
 	}
 
 	.dropdown-menu {
@@ -198,6 +204,7 @@ ul#userNav li.nav-item, span.nav-item{
 			position: static;
 			white-space: nowrap;
 			border-left: #C5902A 1px solid;
+			background-color: @white;
 		}
 
 		.nav-link,
@@ -240,7 +247,6 @@ ul#userNav li.nav-item, span.nav-item{
 			right: 0;
 			width: 100%;
 			margin: 0;
-			background-color: @primary;
 			border-radius: 0;
 			flex-direction: column;
 		}
@@ -250,11 +256,14 @@ ul#userNav li.nav-item, span.nav-item{
 			color: @contrast;
 			text-align: center;
 			width: initial;
+			background-color: @white!important;
+			color: @black;
 
 			&:focus,
 			&:hover {
-				color: @contrast;
-				background-color: @primary;
+				color: @black;
+				background-color: @light-grey;
+				border-left: @color-resalte 4px solid;
 			}
 
 		}
