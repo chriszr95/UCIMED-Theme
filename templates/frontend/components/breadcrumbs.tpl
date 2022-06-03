@@ -26,11 +26,9 @@
 		</li>
 		<li class="current">
 			<span aria-current="page">
-				{if $currentTitleKey}
-					{translate key=$currentTitleKey}
-				{else}
-					{$currentTitle|escape}
-				{/if}
+			{if !$homepageImage}
+				{$pageTitleTranslated}
+			{/if}
 			</span>
 		</li>
 	</ol>
