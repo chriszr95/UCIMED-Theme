@@ -90,6 +90,7 @@
 			{if !empty(trim($primaryMenu)) || $currentContext}
 				{$primaryMenu}
 			{/if}
+
 			{* user menu *}
 			{load_menu name="user" id="primaryNav-userNav" ulClass="navbar-nav" liClass="nav-item"}
 			{include file="frontend/components/languageSwitcher.tpl" id="languageSmallNav"}

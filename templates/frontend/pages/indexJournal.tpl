@@ -84,6 +84,13 @@
 
 	{/if}
 
+	{* Additional Homepage Content *}
+	{if $additionalHomeContent}
+		<div class="row justify-content-center homepage-additional-content">
+			<div class="col-lg-9">{$additionalHomeContent}</div>
+		</div>
+	{/if}
+
 	{* display announcements before full issue *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
 	<section class="row homepage-announcements">
@@ -120,12 +127,7 @@
 		</div>
 	{/if}
 
-	{* Additional Homepage Content *}
-	{if $additionalHomeContent}
-		<div class="row justify-content-center homepage-additional-content">
-			<div class="col-lg-9">{$additionalHomeContent}</div>
-		</div>
-	{/if}
+	
 </div><!-- .container -->
 
 {include file="frontend/components/footer.tpl"}

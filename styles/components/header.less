@@ -15,10 +15,6 @@ div.container-fluid.top-header-area{
 	background-color: #484e8b;
 }
 
-ul#userNav li.nav-item, span.nav-item{
-	border: #575656 1px solid;
-}
-
 #userNav,
 .navbar-logo,
 #languageLargeNav {
@@ -35,7 +31,6 @@ ul#userNav li.nav-item, span.nav-item{
 		text-transform: uppercase;
 		background: @white;
     	color: @black;
-    	border-left: @color-resalte 4px solid;
 	}
 	&:hover{
 		background: @light-grey;
@@ -124,6 +119,10 @@ ul#userNav li.nav-item, span.nav-item{
 		display: none;
 	}
 
+	div.header-botton-border{
+		justify-content: flex-start!important;
+	}
+
 }
 
 @media (min-width: 992px) {
@@ -201,10 +200,10 @@ ul#userNav li.nav-item, span.nav-item{
 		bottom: 0;
 
 		.nav-item {
-			position: static;
 			white-space: nowrap;
 			border-left: #C5902A 1px solid;
 			background-color: @white;
+			transition: 0.5s;
 		}
 
 		.nav-link,
@@ -213,10 +212,13 @@ ul#userNav li.nav-item, span.nav-item{
 			text-transform: uppercase;
 			vertical-align: middle;
 			border: 1px solid transparent;
+			transition: 0.5s;
+			background-color: @light-grey;
 		}
 
 		.nav-link {
 			padding: 0.5rem 1em;
+			background: @white;
 
 			&:hover,
 			&:focus {
@@ -284,6 +286,12 @@ ul#userNav li.nav-item, span.nav-item{
 	#userNav .dropdown-menu,
 	.language-toggle .dropdown-menu {
 		padding: 0.5em;
+		opacity:0;
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		-ms-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
 	}
 
 	#userNav .nav-link,
@@ -294,11 +302,13 @@ ul#userNav li.nav-item, span.nav-item{
 		font-weight: 400;
 		line-height: 1.5em;
 		text-transform: uppercase;
+		transition: 0.5s;
 
 		&:hover,
 		&:focus {
 			outline: 0;
 			border-color: @mid-grey;
+			transition: 0.5s;
 		}
 	}
 
@@ -363,6 +373,7 @@ div.header-botton-border{
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
+	background-position: center;
 
 	.text-area-title{
 		margin-top: 15vh;
@@ -370,7 +381,8 @@ div.header-botton-border{
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
-		align-items: center;
+		align-items: flex-start;
+		padding-left: 5%;
 		justify-content: center;
 
 		h1{
@@ -400,6 +412,7 @@ div.header-botton-border{
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
+	background-position: center;
 
 	.text-area-title{
 		margin-top: 21vh;
