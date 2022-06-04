@@ -46,6 +46,12 @@
 {include file="frontend/components/headerHead.tpl"}
 <body dir="{$currentLocaleLangDir|escape|default:"ltr"}">
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN88M6W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
 {* Header *}
 <header class="main-header">
 	<div class="container-fluid top-header-area">

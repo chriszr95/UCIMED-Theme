@@ -2,6 +2,11 @@ div.menuUser{
 	display: none;
 }
 
+#dropdown.navbar-nav{
+	color: @white;
+	background-color: @color-resalte;
+}
+
 .main-header {
 	background-color: @white;
 
@@ -38,6 +43,9 @@ div.container-fluid.top-header-area{
 
 	.dropdown-menu {
 		padding: 0;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	}
 
 	.dropdown-item {
@@ -439,3 +447,53 @@ li.current {
 div.row.page-header.justify-content-md-center{
 	display: none;
 }
+
+/* Animación de menus */
+
+@media (min-width: 768px) {
+	.animate {
+	  animation-duration: 0.3s;
+	  -webkit-animation-duration: 0.3s;
+	  animation-fill-mode: both;
+	  -webkit-animation-fill-mode: both;
+	}
+  }
+  
+  @keyframes slideIn {
+	0% {
+	  transform: translateY(1rem);
+	  opacity: 0;
+	}
+  
+	100% {
+	  transform: translateY(0rem);
+	  opacity: 1;
+	}
+  
+	0% {
+	  transform: translateY(1rem);
+	  opacity: 0;
+	}
+  }
+  
+  @-webkit-keyframes slideIn {
+	0% {
+	  -webkit-transform: transform;
+	  -webkit-opacity: 0;
+	}
+  
+	100% {
+	  -webkit-transform: translateY(0);
+	  -webkit-opacity: 1;
+	}
+  
+	0% {
+	  -webkit-transform: translateY(1rem);
+	  -webkit-opacity: 0;
+	}
+  }
+  
+  .slideIn {
+	-webkit-animation-name: slideIn;
+	animation-name: slideIn;
+  }
